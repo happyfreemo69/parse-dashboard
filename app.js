@@ -7,7 +7,7 @@ var dashboard = new ParseDashboard({
   "apps": ['dev', 'uat', 'prd'].map(function(x){
     return {
       "serverURL": config[x+'_url'],
-      "appId": config.[x+'_appId'],
+      "appId": config[x+'_appId'],
       "masterKey": config[x+'_masterKey'],
       "appName": x
     }
@@ -17,7 +17,7 @@ var dashboard = new ParseDashboard({
 var app = express();
 
 app.use(reqLogger(config));
-app.get('/ping', function(req,res){
+app.get('/dashboard/ping', function(req,res){
     return res.status(200).end();
 })
 // make the Parse Dashboard available at /dashboard
