@@ -1,7 +1,7 @@
 # config/deploy.rb
 lock '3.4.0'
 set :application, 'parse'
-set :repo_url, 'git@github.com:happyfreemo69/parse.git'
+set :repo_url, 'git@github.com:happyfreemo69/parse-dashboard.git'
 
 set :branch, 'master'
 set :scm, :git
