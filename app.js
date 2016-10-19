@@ -4,14 +4,14 @@ var express = require('express');
 var ParseDashboard = require('parse-dashboard');
 
 var dashboard = new ParseDashboard({
-  "apps": [
-    {
-      "serverURL": config.dev_url,
-      "appId": config.dev_appId,
-      "masterKey": config.dev_masterKey,
-      "appName": "dev"
+  "apps": ['dev', 'uat', 'prd'].map(function(x){
+    return {
+      "serverURL": config[x+'_url'],
+      "appId": config.[x+'_appId'],
+      "masterKey": config[x+'_masterKey'],
+      "appName": x
     }
-  ]
+  })
 });
 
 var app = express();
