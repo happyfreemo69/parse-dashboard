@@ -1,0 +1,9 @@
+version: "2"
+services:
+  parse-dashboard:
+    build: parse-dashboard
+    ports:
+      - "127.0.0.1:$DASH_PORT:$DASH_PORT"
+      - "127.0.0.1:$DASHTTPS_PORT:$DASHTTPS_PORT"
+    volumes:
+      - ./parse-dashboard/privateConfig.js:/home/citylity/parse-dashboard/config/privateConfig.js
