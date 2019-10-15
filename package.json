@@ -10,7 +10,7 @@
         "forever":"0.13.0",
         "express-domain-middleware":"0.1.0",
         "request": "2.53.0",
-        "nodelibs": "dev",
+        "nodelibs": "1.11.0",
         "compression":"1.5.2",
         "parse-dashboard":"1.0.18"
     },
