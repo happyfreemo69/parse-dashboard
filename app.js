@@ -4,7 +4,7 @@ var express = require('express');
 var ParseDashboard = require('parse-dashboard');
 
 var dashboard = new ParseDashboard({
-  "apps": ['dev', 'uat', 'prd'].map(function(x){
+  "apps": config['env_list'].map(function(x){
     return {
       "serverURL": config[x+'_url'],
       "appId": config[x+'_appId'],
